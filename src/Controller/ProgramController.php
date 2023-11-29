@@ -4,7 +4,7 @@ namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
-
+use App\Repository\ProgramRepository;
 use Symfony\Component\Routing\Annotation\Route;
 
 class ProgramController extends AbstractController
@@ -17,4 +17,17 @@ class ProgramController extends AbstractController
          ]);
         
         }
-}
+  
+        #[Route('/program/{id}',requirements: ['id'=>'\d+'], methods: ['GET'], name: 'program_show')]
+    public function show(int $id): Response
+    {
+           // $programRepository=new ProgramRepository();
+           // $program= $programRepository->findOneBy(["id"=> $id]);
+           if (!$id) {
+             return $this->redirectToRoute('page_404');
+           }
+            return $this->render('program/show.html.twig', ['id' => 4]);
+       /* ]);
+*/
+    }
+} 
