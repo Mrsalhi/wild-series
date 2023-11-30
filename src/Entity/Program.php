@@ -21,13 +21,11 @@ class Program
     private ?string $synopsis = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $titles = null;
-
-    #[ORM\Column(type: Types::TEXT)]
-    private ?string $synopsi = null;
-
-    #[ORM\Column(length: 255)]
     private ?string $poster = null;
+
+    #[ORM\ManyToOne]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?Category $category = null;
 
     public function getId(): ?int
     {
@@ -58,30 +56,6 @@ class Program
         return $this;
     }
 
-    public function getTitles(): ?string
-    {
-        return $this->titles;
-    }
-
-    public function setTitles(string $titles): static
-    {
-        $this->titles = $titles;
-
-        return $this;
-    }
-
-    public function getSynopsi(): ?string
-    {
-        return $this->synopsi;
-    }
-
-    public function setSynopsi(string $synopsi): static
-    {
-        $this->synopsi = $synopsi;
-
-        return $this;
-    }
-
     public function getPoster(): ?string
     {
         return $this->poster;
@@ -90,6 +64,18 @@ class Program
     public function setPoster(string $poster): static
     {
         $this->poster = $poster;
+
+        return $this;
+    }
+
+    public function getCategory(): ?Category
+    {
+        return $this->category;
+    }
+
+    public function setCategory(?Category $category): static
+    {
+        $this->category = $category;
 
         return $this;
     }
