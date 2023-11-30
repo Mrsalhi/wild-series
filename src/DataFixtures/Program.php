@@ -43,9 +43,15 @@ class ProgramFixtures extends Fixture implements DependentFixtureInterface
         $program->setSynopsis('constituée d épisodes indépendants ayant pour thème un univers horrifique qui fait référence à de nombreux faits divers,des légendes urbaines et des histoires paranormales.');
         $program->setCategory($this->getReference('category_Horreur'));
         $manager->persist($program);
+       
+
+        $program = new Program();
+        $program->setTitle('kaamelott ');
+        $program->setSynopsis('comedie ayant pour theme l univers d arthur pendragon.');
+        $program->setCategory($this->getReference('category_Comedie'));
+        $manager->persist($program);
         $manager->flush();
     }
-
     public function getDependencies()
     {
         // Tu retournes ici toutes les classes de fixtures dont ProgramFixtures dépend
