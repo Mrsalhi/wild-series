@@ -21,12 +21,6 @@ class Program
     private ?string $synopsis = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $titles = null;
-
-    #[ORM\Column(type: Types::TEXT)]
-    private ?string $synopsi = null;
-
-    #[ORM\Column(length: 255)]
     private ?string $poster = null;
 
     #[ORM\ManyToOne]
@@ -58,30 +52,6 @@ class Program
     public function setSynopsis(string $synopsis): static
     {
         $this->synopsis = $synopsis;
-
-        return $this;
-    }
-
-    public function getTitles(): ?string
-    {
-        return $this->titles;
-    }
-
-    public function setTitles(string $titles): static
-    {
-        $this->titles = $titles;
-
-        return $this;
-    }
-
-    public function getSynopsi(): ?string
-    {
-        return $this->synopsi;
-    }
-
-    public function setSynopsi(string $synopsi): static
-    {
-        $this->synopsi = $synopsi;
 
         return $this;
     }
