@@ -26,6 +26,13 @@ class ProgramFixtures extends Fixture implements DependentFixtureInterface
         $program->setPoster('ttt');
         $manager->persist($program);
        
+   
+        $program = new Program();
+        $program->setTitle('Arcane');
+        $program->setSynopsis('Arcane est une série télévisée d animation américano-française dont le scénario prend place dans l univers du jeu vidéo League of Legendss');
+        $program->setCategory($this->getReference('category_Animation'));
+        $program->setPoster('ttt');
+        $this->addReference('program_Arcane', $program);
 
         $program = new Program();
         $program->setTitle('Gen V');

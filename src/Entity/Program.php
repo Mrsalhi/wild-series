@@ -35,7 +35,7 @@ class Program
     #[ORM\Column]
     private ?int $year = null;
 
-    #[ORM\OneToMany(mappedBy: 'number', targetEntity: Season::class, orphanRemoval: true)]
+    #[ORM\OneToMany(mappedBy: 'program', targetEntity: Season::class)]
     private Collection $seasons;
 
     public function __construct()
@@ -132,7 +132,7 @@ class Program
     {
         if (!$this->seasons->contains($season)) {
             $this->seasons->add($season);
-            $season->setNumber($this);
+            $season->setProgram($this);
         }
 
         return $this;
@@ -142,8 +142,8 @@ class Program
     {
         if ($this->seasons->removeElement($season)) {
             // set the owning side to null (unless already changed)
-            if ($season->getNumber() === $this) {
-                $season->setNumber(null);
+            if ($season->getProgram() === $this) {
+                $season->setProgram(null);
             }
         }
 

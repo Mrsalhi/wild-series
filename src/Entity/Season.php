@@ -17,17 +17,19 @@ class Season
     private ?int $id = null;
 
     #[ORM\Column]
+    private ?int $number = null;
+
+    #[ORM\Column]
     private ?int $year = null;
 
     #[ORM\Column(type: Types::TEXT)]
     private ?string $description = null;
 
-    #[ORM\OneToMany(mappedBy: 'title', targetEntity: Episode::class, orphanRemoval: true)]
-    private Collection $episodes;
-
     #[ORM\ManyToOne(inversedBy: 'seasons')]
-    #[ORM\JoinColumn(nullable: false)]
-    private ?program $number = null;
+    private ?program $program = null;
+
+    #[ORM\OneToMany(mappedBy: 'season', targetEntity: Episode::class)]
+    private Collection $episodes;
 
     public function __construct()
     {
@@ -37,6 +39,18 @@ class Season
     public function getId(): ?int
     {
         return $this->id;
+    }
+
+    public function getNumber(): ?int
+    {
+        return $this->number;
+    }
+
+    public function setNumber(int $number): static
+    {
+        $this->number = $number;
+
+        return $this;
     }
 
     public function getYear(): ?int
@@ -63,6 +77,18 @@ class Season
         return $this;
     }
 
+    public function getProgram(): ?program
+    {
+        return $this->program;
+    }
+
+    public function setProgram(?program $program): static
+    {
+        $this->program = $program;
+
+        return $this;
+    }
+
     /**
      * @return Collection<int, Episode>
      */
@@ -75,7 +101,7 @@ class Season
     {
         if (!$this->episodes->contains($episode)) {
             $this->episodes->add($episode);
-            $episode->setTitle($this);
+            $episode->setSeason($this);
         }
 
         return $this;
@@ -85,22 +111,10 @@ class Season
     {
         if ($this->episodes->removeElement($episode)) {
             // set the owning side to null (unless already changed)
-            if ($episode->getTitle() === $this) {
-                $episode->setTitle(null);
+            if ($episode->getSeason() === $this) {
+                $episode->setSeason(null);
             }
         }
-
-        return $this;
-    }
-
-    public function getNumber(): ?program
-    {
-        return $this->number;
-    }
-
-    public function setNumber(?program $number): static
-    {
-        $this->number = $number;
 
         return $this;
     }
