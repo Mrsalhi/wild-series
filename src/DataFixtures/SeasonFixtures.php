@@ -20,7 +20,6 @@ $season->setYear(2021);
 $this->addReference('season1_Arcane', $season);
 
 
-//src/DataFixtures/SeasonFixtures.php
 $season = new Season();
 $season->setNumber(1);
 $season->setProgram($this->getReference('program_Walking dead'));
@@ -161,6 +160,7 @@ $season->setProgram($this->getReference('program_kaamelott'));
 $season->setDescription(' Livre II');
 $season->setYear(2006);
 $this->addReference('season2_kaamelott', $season);
+
 
 $season = new Season();
 $season->setNumber(3);
