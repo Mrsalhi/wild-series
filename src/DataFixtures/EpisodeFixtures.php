@@ -188,99 +188,102 @@ $episode->setSynopsis(' Tandis que Rick et Carl rentrent vers la ferme d Hershel
 
 
 $episode = new Episode();
-$episode->setTitle();
+$episode->setTitle('Graines');
 $episode->setNumber(1);
 $episode->setSeason($this->getReference('season3_Walking dead'));
-$episode->setSynopsis(' ');
+$episode->setSynopsis('Quelques mois après avoir dû quitter précipitamment la ferme de Hershel, les survivants explorent les environs à la recherche d un nouvel endroit sûr, en vain. L accouchement de Lori est imminent. Tous commencent à désespérer lorsqu ils tombent par hasard sur une prison. Pour Rick, cet endroit est un lieu idéal pour être en sécurité mais il faut d abord se débarrasser des dizaines de rôdeurs qui s y trouvent. Lors de leur action pour sécuriser les lieux, le groupe va également très vite découvrir qu il n y a pas que des morts-vivants sur les lieux. ');
 
 
 $episode = new Episode();
-$episode->setTitle();
+$episode->setTitle('Malade');
 $episode->setNumber(2);
 $episode->setSeason($this->getReference('season3_Walking dead'));
-$episode->setSynopsis(' ');
+$episode->setSynopsis('Après qu Hershel s est fait mordre par un rôdeur dans les couloirs de la prison et que Rick a dû lui couper la jambe pour éviter que l infection ne se propage, les survivants tombent sur un petit groupe de détenus composé de Thomas, Axel, Oscar, Andrew et « Big Tiny » qui ont échappé à l épidémie. Ces prisonniers étaient planqués depuis des mois dans la cafétéria, n ayant aucune idée de ce qui les attendait vraiment dehors. C’est à contrecœur que Rick leur propose un marché : en échange de la moitié de leur nourriture, il accepte de les aider à nettoyer un quartier de la prison où ils pourraient s’installer tranquillement. Cependant, entre l’ancien shérif et le chef de la bande de prisonniers, instable et imprévisible, l’ambiance est loin d être au beau fixe. Dans le même temps, Hershel, la personne la plus à même d aider Lori à accoucher, reste inconscient entre la vie et la mort.');
 
 
 $episode = new Episode();
-$episode->setTitle();
+$episode->setTitle('Marchez avec moi');
 $episode->setNumber(3);
 $episode->setSeason($this->getReference('season3_Walking dead'));
-$episode->setSynopsis(' ');
+$episode->setSynopsis('Andrea, séparée du groupe depuis l attaque de la ferme par les rôdeurs et sa nouvelle acolyte de survie, la mystérieuse et imperturbable Michonne, assistent au crash d un hélicoptère militaire en pleine forêt. Alors qu elles se rendent sur les lieux de l accident, un autre groupe arrive et les conduit jusqu  à leur camp. Andrea retrouve parmi eux, Merle Dixon, l incontrôlable grand frère de Daryl, que Rick avait dû menotter sur un toit au début de l aventure. Celui-ci vit désormais au sein d une communauté très organisée et dirigée par un homme charismatique qui se fait appeler le Gouverneur. Elle lui apprend tout ce qui s est passé depuis que Rick a dû le menotter, notamment la fuite d Atlanta, l arrivée dans la ferme de Hershel mais aussi les nombreux morts au sein du groupe dont celles de Jim, Dale, Jacquie, Sophia et Amy. À la fin de l épisode, on découvre que le Gouverneur consacre une pièce a la conservation de têtes humaines et de rodeurs. ');
+
+
 
 $episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(4);
+$episode->setTitle('Un tueur à l intérieur');
+$episode->setNumber('5');
 $episode->setSeason($this->getReference('season3_Walking dead'));
-$episode->setSynopsis(' ');
-
+$episode->setSynopsis(' Alors que Rick et ses camarades sont en train de sécuriser les lieux, ils se retrouvent face à Axel et Oscar, les deux prisonniers rescapés, qui les supplient de pouvoir rester avec eux, ce qui leur est refusé. Soudain, une horde de rôdeurs envahit la prison et les survivants sont contraints de se séparer en plusieurs petits groupes. Lori se retrouve perdue dans les couloirs avec Carl et Maggie, au moment où les contractions se font de plus en plus pressantes. Une décision radicale doit alors être rapidement prise au sujet de son accouchement. Maggie doit lui faire une césarienne et Lori perd beaucoup de sang. Une fois qu elle a accouché, son fils Carl est obligé de lui tirer une balle dans la tête pour qu elle ne se transforme pas en rôdeur. Blessé, T-Dog se sacrifie afin que Carol parvienne à s en sortir, mais elle n arrive pas à retrouver les autres, qui la croient alors morte. De son côté, Rick, à la recherche de sa femme et de son fils, découvre que les portes de la prison ont été sabotées par quelqu un, ce qui a permis l intrusion de tous ces morts-vivants en son sein. Quant à Andrea et Michonne, elles vivent toujours dans la communauté du Gouverneur. Si Andrea ne veut pas en partir, Michonne sent que quelque chose de louche se trame autour de la personnalité de leur hôte.');
+ 
 $episode = new Episode();
-$episode->setTitle();
+$episode->setTitle(' Dis-le');
 $episode->setNumber(5);
 $episode->setSeason($this->getReference('season3_Walking dead'));
-$episode->setSynopsis(' ');
+$episode->setSynopsis('Toujours très méfiante à l égard du Gouverneur et déterminée à quitter la communauté, Michonne s introduit dans la maison de celui-ci afin de récupérer son sabre et découvre que son hôte garde des rôdeurs en captivité. Prise sur le fait, elle le menace avant de quitter la maison. Elle arrive à convaincre Andrea de partir avec elle, mais au dernier moment, cette dernière change d avis et Michonne s en va finalement seule. Andrea ne tarde pas à légèrement regretter d être restée lorsqu elle voit la façon dont le Gouverneur utilise les rôdeurs qu il capture pour divertir les habitants de sa ville fortifiée. ');
+
 
 $episode = new Episode();
-$episode->setTitle();
+$episode->setTitle('La Traque');
 $episode->setNumber(6);
 $episode->setSeason($this->getReference('season3_Walking dead'));
-$episode->setSynopsis(' ');
+$episode->setSynopsis('Merle et ses hommes se lancent à la poursuite de Michonne, tout juste après son départ de la ville fortifiée. Elle parvient à leur échapper après un âpre combat dans la forêt qui la laisse blessée à une jambe. De retour à Woodbury, Merle ment au Gouverneur (en lui disant avoir tué Michonne), qui de son côté entame une liaison avec Andrea. Dans la prison, Rick décroche le téléphone qu il entend sonner et entame une discussion avec une femme lui indiquant vivre dans un endroit sûr et sans rôdeur. Après plusieurs appels, au cours desquels l ancien shérif converse aussi avec un homme, il comprend vivre une hallucination : les personnes au bout du fil sont Amy, Jim, Jacquie et sa défunte épouse Lori, qui l implore de se ressaisir afin de prendre soin de leurs enfants. Daryl, lui, retrouve enfin Carol, prostrée derrière une porte, perdue quelque part dans un des couloirs. Glenn et Maggie, partis en ville chercher de la nourriture, ont la malchance de croiser la route de Merle. Celui-ci les menace avec une arme et les oblige à le suivre à Woodbury, où ils devront lui dire où est son frère. Michonne, cachée derrière une voiture, assiste à toute la scène. Alors que Rick semble retrouver de l allant et s occupe enfin de sa fille dans la cour de la prison, il voit une personne s avancer vers la grille : c est Michonne. ');
 
 $episode = new Episode();
-$episode->setTitle();
+$episode->setTitle('Quand les morts approchent');
 $episode->setNumber(7);
 $episode->setSeason($this->getReference('season3_Walking dead'));
-$episode->setSynopsis(' ');
+$episode->setSynopsis('À Woodbury, Merle torture Glenn afin qu il lui indique où trouver son frère et le reste du groupe. Mais le jeune homme refuse catégoriquement de parler. De son côté, Michonne arrive à la prison épuisée par sa blessure et est secourue juste à temps par Rick et son fils. Là, elle leur parle de l enlèvement de Glenn et Maggie ainsi que de la ville fortifiée. Rick décide immédiatement de s y rendre accompagné de Daryl, Oscar et de Michonne. Sur place, Andrea assiste aux recherches secrètes de Milton et apprend que son travail est de déterminer si les rôdeurs conservent la conscience de ce qu ils étaient avant. Mais l expérience sur un patient volontaire en fin de vie échoue : Andrea est obligée de le tuer après sa transformation. ');
 
 $episode = new Episode();
-$episode->setTitle();
+$episode->setTitle(' Une vie de souffrance');
 $episode->setNumber(8);
 $episode->setSeason($this->getReference('season3_Walking dead'));
-$episode->setSynopsis(' ');
+$episode->setSynopsis(' Un groupe de survivants inconnus, composé de trois hommes et deux femmes, dont l une vient d être mordue, tente d échapper aux rôdeurs qui les pourchassent. Dans leur fuite, ils arrivent à la prison et réussissent à y pénétrer.');
 
 $episode = new Episode();
-$episode->setTitle();
+$episode->setTitle('Le Roi du suicide');
 $episode->setNumber(9);
 $episode->setSeason($this->getReference('season3_Walking dead'));
-$episode->setSynopsis(' ');
+$episode->setSynopsis('Contraints par le Gouverneur, Daryl et Merle doivent se battre l un contre l autre dans un combat à mort. Le vainqueur se verra libéré. Alors que le combat fratricide fait rage, Rick et les siens interviennent par surprise et réussissent à libérer les deux frères après une nouvelle fusillade. Une fois en lieu sûr, et devant le refus catégorique des autres d intégrer Merle au groupe, Daryl prend la décision de prendre la route seul avec lui. À Woodbury, ce violent évènement a jeté le trouble dans la communauté. Beaucoup veulent partir, ne se sentant plus en sécurité. Des rôdeurs parviennent même à passer les murs et à s attaquer à certains d entre eux. Meurtri au plus profond de lui-même, le Gouverneur, plus froid que jamais, reste étranger à ce vacarme et rumine sa vengeance. ');
 
 $episode = new Episode();
-$episode->setTitle();
+$episode->setTitle('Chez nous');
 $episode->setNumber(10);
 $episode->setSeason($this->getReference('season3_Walking dead'));
-$episode->setSynopsis(' ');
+$episode->setSynopsis('Le Gouverneur vient présenter ses excuses à Andrea pour son comportement récent. Il prétend qu il veut se retirer du commandement de Woodbury après cet échec et lui passer le relais. Il déclare également ne pas songer à se venger et souhaiter tourner la page. ');
 
 $episode = new Episode();
-$episode->setTitle();
+$episode->setTitle('Entre deux feux');
 $episode->setNumber(11);
 $episode->setSeason($this->getReference('season3_Walking dead'));
-$episode->setSynopsis(' ');
+$episode->setSynopsis('Le Gouverneur recense tous les habitants de Woodbury aptes au combat dans le but de lever une armée pour partir à l assaut de la prison. Andrea s oppose fermement à ce projet et lui demande la permission d aller parlementer avec ses anciens compagnons afin d établir une trêve. Contre son avis, Andrea décide tout de même de s y rendre et demande à Milton de l accompagner. Le scientifique accepte, surtout pour pouvoir jouer double-jeu en faveur de son supérieur. Sur le chemin, ils croisent Tyreese et les siens, partis précipitamment de la prison après l’échauffourée avec Rick. Milton décide de les ramener à la ville fortifiée, pendant qu Andrea continue seule sa route. Arrivée à destination, elle découvre un groupe meurtri, sur la défensive, qui ne l accueille pas à bras ouverts. Rick, Michonne et les autres lui racontent leurs mésaventures, comment ils vivent désormais, la façon dont le Gouverneur les a attaqués et lui signifient aussi qu ils n abdiqueront pas dans cette bataille. Tyreese et sa bande se voient offrir l hospitalité du Gouverneur et acceptent de le rejoindre dans son combat. Carol discute avec Andrea avant qu elle ne rentre à Woodbury et lui demande de mettre un terme à tout cela en tuant le Gouverneur pendant son sommeil. Une fois rentrée à Woodbury, aux côtés du Gouverneur, la jeune femme, lors du sommeil de son amant, décide alors de passer à l acte au nom de ses anciens partenaires. Mais au tout dernier moment, elle renonce à son geste fatal.');
 
 $episode = new Episode();
-$episode->setTitle();
+$episode->setTitle('Retrouvailles');
 $episode->setNumber(12);
 $episode->setSeason($this->getReference('season3_Walking dead'));
-$episode->setSynopsis(' ');
+$episode->setSynopsis('Rick, accompagné par Carl et Michonne, part à la recherche d armes et de munitions. Le petit groupe se dirige vers la ville où vivait l ancien shérif afin de faire un tour par l’armurerie du commissariat. Mais celle-ci a déjà été complètement vidée. Au cœur du centre-ville, ils tombent sur une petite fortification truffée de pièges et ne tardent pas à être la cible d un tireur isolé. Carl réussit à le neutraliser en lui tirant dessus. Ce sniper se révèle être Morgan, l homme qui était venu en aide à Rick lorsque celui-ci était sorti du coma et avait quitté l’hôpital. Il a amassé les armes dans un bâtiment quil défend contre les rôdeurs. ');
 
 $episode = new Episode();
-$episode->setTitle();
+$episode->setTitle('Une flèche sur la porte');
 $episode->setNumber(13);
 $episode->setSeason($this->getReference('season3_Walking dead'));
-$episode->setSynopsis(' ');
+$episode->setSynopsis('Rick, Daryl et Hershel se rendent dans un endroit isolé qu ils inspectent. Puis, pendant que ses compagnons montent la garde dehors, Rick rentre dans une petite grange abandonnée où l attend son ennemi, le Gouverneur. Les deux hommes se retrouvent en fait ici pour parlementer, à la suite d un rendez-vous arrangé par Andrea afin de tenter de négocier une trêve. Cette dernière, après avoir fait les présentations et s être essayée au rôle de médiatrice, les laisse parler seul à seul. Dans un climat de méfiance, ils apprennent néanmoins à faire connaissance. L ancien shérif propose un partage des terres, la création d une frontière entre les deux camps que personne n aura le droit de franchir, mais son homologue refuse. Il préfère lui soumettre un autre marché : en échange de l arrêt des hostilités, il veut Michonne et seulement elle. Le Gouverneur laisse à Rick deux jours pour réfléchir à cette suggestion : la seule vie de la guerrière au sabre ou bien une guerre qui engagera celles de tous les occupants de la prison. ');
 
 $episode = new Episode();
-$episode->setTitle();
+$episode->setTitle('');
 $episode->setNumber(14);
 $episode->setSeason($this->getReference('season3_Walking dead'));
 $episode->setSynopsis(' ');
 
 $episode = new Episode();
-$episode->setTitle();
+$episode->setTitle('');
 $episode->setNumber(15);
 $episode->setSeason($this->getReference('season3_Walking dead'));
 $episode->setSynopsis(' ');
 
 $episode = new Episode();
-$episode->setTitle();
+$episode->setTitle('');
 $episode->setNumber(16);
 $episode->setSeason($this->getReference('season3_Walking dead'));
 $episode->setSynopsis(' ');
