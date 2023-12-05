@@ -129,8 +129,8 @@ $this->addReference('season2_Jujutsu Kaisen', $season);
 $season = new Season();
 $season->setNumber(1);
 $season->setProgram($this->getReference('program_Gen V'));
-$season->setDescription('2023');
-$season->setYear();
+$season->setDescription('Des jeunes gens avec des pouvoirs sont mis à rude épreuve et subissent de nombreux tests au sein de la Godolkin University School of Crimefighting tenue par Vought International');
+$season->setYear(2023);
 $this->addReference('season1_Gen V', $season);
 
 $season = new Season();

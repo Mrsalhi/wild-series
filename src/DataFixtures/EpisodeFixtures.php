@@ -64,3 +64,43 @@ $episode->setTitle('Rouages et engrenages');
 $episode->setNumber(9);
 $episode->setSeason($this->getReference('season1_Arcane'));
 $episode->setSynopsis('À deux doigts d entrer en guerre, les chefs de Piltover et de Zaun sont face à un ultimatum, jusqu à ce qu un affrontement fatidique bouleverse les deux villes à jamais.');
+
+
+$episode = new Episode();
+$episode->setTitle('');
+$episode->setNumber(1);
+$episode->setSeason($this->getReference('season1_'));
+$episode->setSynopsis(' ');
+
+
+$episode = new Episode();
+$episode->setTitle('');
+$episode->setNumber(1);
+$episode->setSeason($this->getReference('season1_'));
+$episode->setSynopsis(' ');
+
+
+$episode = new Episode();
+$episode->setTitle('');
+$episode->setNumber(1);
+$episode->setSeason($this->getReference('season1_'));
+$episode->setSynopsis(' ');
+
+
+$episode = new Episode();
+$episode->setTitle('');
+$episode->setNumber(1);
+$episode->setSeason($this->getReference('season1_'));
+$episode->setSynopsis(' ');
+
+$episode = new Episode();
+$episode->setTitle('');
+$episode->setNumber(1);
+$episode->setSeason($this->getReference('season1_'));
+$episode->setSynopsis(' ');
+
+$episode = new Episode();
+$episode->setTitle('');
+$episode->setNumber(1);
+$episode->setSeason($this->getReference('season1_'));
+$episode->setSynopsis(' ');
