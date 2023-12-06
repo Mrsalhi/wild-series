@@ -4,9 +4,12 @@ namespace App\DataFixtures;
 
 use App\Entity\Episode;
 use Doctrine\Bundle\FixturesBundle\Fixture;
-use Doctrine\Persistence\ObjectManager;
+use Doctrine\Persistence\ObjectEpisode;
 
-//src/DataFixtures/EpisodeFixtures.php
+class EpisodeFixtures extends Fixture
+{ 
+    public function load (ObjectEpisode $episode)
+    {
 $episode = new Episode();
 $episode->setTitle('Welcome to the Playground');
 $episode->setNumber(1);
@@ -271,811 +274,391 @@ $episode->setSeason($this->getReference('season3_Walking dead'));
 $episode->setSynopsis('Rick, Daryl et Hershel se rendent dans un endroit isolé qu ils inspectent. Puis, pendant que ses compagnons montent la garde dehors, Rick rentre dans une petite grange abandonnée où l attend son ennemi, le Gouverneur. Les deux hommes se retrouvent en fait ici pour parlementer, à la suite d un rendez-vous arrangé par Andrea afin de tenter de négocier une trêve. Cette dernière, après avoir fait les présentations et s être essayée au rôle de médiatrice, les laisse parler seul à seul. Dans un climat de méfiance, ils apprennent néanmoins à faire connaissance. L ancien shérif propose un partage des terres, la création d une frontière entre les deux camps que personne n aura le droit de franchir, mais son homologue refuse. Il préfère lui soumettre un autre marché : en échange de l arrêt des hostilités, il veut Michonne et seulement elle. Le Gouverneur laisse à Rick deux jours pour réfléchir à cette suggestion : la seule vie de la guerrière au sabre ou bien une guerre qui engagera celles de tous les occupants de la prison. ');
 
 $episode = new Episode();
-$episode->setTitle('');
-$episode->setNumber(14);
-$episode->setSeason($this->getReference('season3_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle('');
-$episode->setNumber(15);
-$episode->setSeason($this->getReference('season3_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle('');
-$episode->setNumber(16);
-$episode->setSeason($this->getReference('season3_Walking dead'));
-$episode->setSynopsis(' ');
-
-
-$episode = new Episode();
-$episode->setTitle();
+$episode->setTitle('Ryomen Sukuna');
 $episode->setNumber(1);
-$episode->setSeason($this->getReference('season4_Walking dead'));
+$episode->setSeason($this->getReference('season1_Jujutsu Kaisen'));
 $episode->setSynopsis(' ');
 
-
 $episode = new Episode();
-$episode->setTitle();
+$episode->setTitle('Pour moi-même');
 $episode->setNumber(2);
-$episode->setSeason($this->getReference('season4_Walking dead'));
+$episode->setSeason($this->getReference('season1_Jujutsu Kaisen'));
 $episode->setSynopsis(' ');
 
-
 $episode = new Episode();
-$episode->setTitle();
+$episode->setTitle('La bâtisseuse');
 $episode->setNumber(3);
-$episode->setSeason($this->getReference('season4_Walking dead'));
+$episode->setSeason($this->getReference('season1_Jujutsu Kaisen'));
 $episode->setSynopsis(' ');
 
 $episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(4);
-$episode->setSeason($this->getReference('season4_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(5);
-$episode->setSeason($this->getReference('season4_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(6);
-$episode->setSeason($this->getReference('season4_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(7);
-$episode->setSeason($this->getReference('season4_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(8);
-$episode->setSeason($this->getReference('season4_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(9);
-$episode->setSeason($this->getReference('season4_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(10);
-$episode->setSeason($this->getReference('season4_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(11);
-$episode->setSeason($this->getReference('season4_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(12);
-$episode->setSeason($this->getReference('season4_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(13);
-$episode->setSeason($this->getReference('season4_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(14);
-$episode->setSeason($this->getReference('season4_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(15);
-$episode->setSeason($this->getReference('season4_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(16);
-$episode->setSeason($this->getReference('season4_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
+$episode->setTitle('Ryomen Sukuna');
 $episode->setNumber(1);
-$episode->setSeason($this->getReference('season5_Walking dead'));
-$episode->setSynopsis(' ');
-
+$episode->setSeason($this->getReference('season1_Jujutsu Kaisen'));
+$episode->setSynopsis('episode1 ');
 
 $episode = new Episode();
-$episode->setTitle();
+$episode->setTitle('Pour moi-même');
 $episode->setNumber(2);
-$episode->setSeason($this->getReference('season5_Walking dead'));
-$episode->setSynopsis(' ');
-
+$episode->setSeason($this->getReference('season1_Jujutsu Kaisen'));
+$episode->setSynopsis('episode2 ');
 
 $episode = new Episode();
-$episode->setTitle();
+$episode->setTitle('La bâtisseuse');
 $episode->setNumber(3);
-$episode->setSeason($this->getReference('season5_Walking dead'));
-$episode->setSynopsis(' ');
+$episode->setSeason($this->getReference('season1_Jujutsu Kaisen'));
+$episode->setSynopsis(' episode3');
 
 $episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(4);
-$episode->setSeason($this->getReference('season5_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(5);
-$episode->setSeason($this->getReference('season5_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(6);
-$episode->setSeason($this->getReference('season5_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(7);
-$episode->setSeason($this->getReference('season5_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(8);
-$episode->setSeason($this->getReference('season5_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(9);
-$episode->setSeason($this->getReference('season5_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(10);
-$episode->setSeason($this->getReference('season5_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(11);
-$episode->setSeason($this->getReference('season5_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(12);
-$episode->setSeason($this->getReference('season5_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(13);
-$episode->setSeason($this->getReference('season35_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(14);
-$episode->setSeason($this->getReference('season5_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(15);
-$episode->setSeason($this->getReference('season5_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(16);
-$episode->setSeason($this->getReference('season5_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
+$episode->setTitle('Trésor caché');
 $episode->setNumber(1);
-$episode->setSeason($this->getReference('season6_Walking dead'));
-$episode->setSynopsis(' ');
-
+$episode->setSeason($this->getReference('season2_Jujutsu Kaisen'));
+$episode->setSynopsis('episode1 ');
 
 $episode = new Episode();
-$episode->setTitle();
+$episode->setTitle('Trésor caché 2');
 $episode->setNumber(2);
-$episode->setSeason($this->getReference('season6_Walking dead'));
-$episode->setSynopsis(' ');
-
+$episode->setSeason($this->getReference('season2_Jujutsu Kaisen'));
+$episode->setSynopsis('episode2 ');
 
 $episode = new Episode();
-$episode->setTitle();
+$episode->setTitle('Trésor caché 3');
 $episode->setNumber(3);
-$episode->setSeason($this->getReference('season6_Walking dead'));
-$episode->setSynopsis(' ');
+$episode->setSeason($this->getReference('season2_Jujutsu Kaisen'));
+$episode->setSynopsis(' episode3');
+
 
 $episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(4);
-$episode->setSeason($this->getReference('season6_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(5);
-$episode->setSeason($this->getReference('season6_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(6);
-$episode->setSeason($this->getReference('season6_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(7);
-$episode->setSeason($this->getReference('season6_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(8);
-$episode->setSeason($this->getReference('season6_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(9);
-$episode->setSeason($this->getReference('season6_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(10);
-$episode->setSeason($this->getReference('season6_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(11);
-$episode->setSeason($this->getReference('season6_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(12);
-$episode->setSeason($this->getReference('season6_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(13);
-$episode->setSeason($this->getReference('season6_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(14);
-$episode->setSeason($this->getReference('season6_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(15);
-$episode->setSeason($this->getReference('season6_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(16);
-$episode->setSeason($this->getReference('season6_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
+$episode->setTitle('Godolkin University');
 $episode->setNumber(1);
-$episode->setSeason($this->getReference('season7_Walking dead'));
-$episode->setSynopsis(' ');
-
+$episode->setSeason($this->getReference('season1_Gen V'));
+$episode->setSynopsis('episode 1');
 
 $episode = new Episode();
-$episode->setTitle();
+$episode->setTitle('Premier Jour');
 $episode->setNumber(2);
-$episode->setSeason($this->getReference('season7_Walking dead'));
-$episode->setSynopsis(' ');
-
+$episode->setSeason($this->getReference('season1_Gen V'));
+$episode->setSynopsis('episode2.');
 
 $episode = new Episode();
-$episode->setTitle();
+$episode->setTitle('Think Brink');
 $episode->setNumber(3);
-$episode->setSeason($this->getReference('season7_Walking dead'));
-$episode->setSynopsis(' ');
+$episode->setSeason($this->getReference('season1_Gen V'));
+$episode->setSynopsis("episode3");
 
 $episode = new Episode();
-$episode->setTitle();
+$episode->setTitle('Toute la vérité !');
 $episode->setNumber(4);
-$episode->setSeason($this->getReference('season7_Walking dead'));
-$episode->setSynopsis(' ');
+$episode->setSeason($this->getReference('season1_Gen V'));
+$episode->setSynopsis('episode4.');
+
 
 $episode = new Episode();
-$episode->setTitle();
+$episode->setTitle('Bienvenue au Club des Monstres');
 $episode->setNumber(5);
-$episode->setSeason($this->getReference('season7_Walking dead'));
-$episode->setSynopsis(' ');
+$episode->setSeason($this->getReference('season1_Gen V'));
+$episode->setSynopsis('episode5.');
+
 
 $episode = new Episode();
-$episode->setTitle();
+$episode->setTitle('Jumanji');
 $episode->setNumber(6);
-$episode->setSeason($this->getReference('season7_Walking dead'));
-$episode->setSynopsis(' ');
+$episode->setSeason($this->getReference('season1_Gen V'));
+$episode->setSynopsis('episode6.');
 
 $episode = new Episode();
-$episode->setTitle();
+$episode->setTitle('Nausée');
 $episode->setNumber(7);
-$episode->setSeason($this->getReference('season7Walking dead'));
-$episode->setSynopsis(' ');
+$episode->setSeason($this->getReference('season1_Gen V'));
+$episode->setSynopsis('episode7.');
+
 
 $episode = new Episode();
-$episode->setTitle();
+$episode->setTitle('Les Gardiens de la Godolkin');
 $episode->setNumber(8);
-$episode->setSeason($this->getReference('season7_Walking dead'));
-$episode->setSynopsis(' ');
+$episode->setSeason($this->getReference('season1_Gen V'));
+$episode->setSynopsis('episode8.');
+
 
 $episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(9);
-$episode->setSeason($this->getReference('season7_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(10);
-$episode->setSeason($this->getReference('season7_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(11);
-$episode->setSeason($this->getReference('season7_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(12);
-$episode->setSeason($this->getReference('season7_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(13);
-$episode->setSeason($this->getReference('season7_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(14);
-$episode->setSeason($this->getReference('season7_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(15);
-$episode->setSeason($this->getReference('season7_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(16);
-$episode->setSeason($this->getReference('season7_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
+$episode->setTitle('Au commencement');
 $episode->setNumber(1);
-$episode->setSeason($this->getReference('season8_Walking dead'));
-$episode->setSynopsis(' ');
-
+$episode->setSeason($this->getReference('season1_Good Omens'));
+$episode->setSynopsis('episode 1');
 
 $episode = new Episode();
-$episode->setTitle();
+$episode->setTitle('Le Livre');
 $episode->setNumber(2);
-$episode->setSeason($this->getReference('season8_Walking dead'));
-$episode->setSynopsis(' ');
-
+$episode->setSeason($this->getReference('season1_Good Omens'));
+$episode->setSynopsis('episode2.');
 
 $episode = new Episode();
-$episode->setTitle();
+$episode->setTitle('Des temps difficiles');
 $episode->setNumber(3);
-$episode->setSeason($this->getReference('season8_Walking dead'));
-$episode->setSynopsis(' ');
+$episode->setSeason($this->getReference('season1_Good Omens'));
+$episode->setSynopsis("episode3");
 
 $episode = new Episode();
-$episode->setTitle();
+$episode->setTitle('La Récré du samedi matin ');
 $episode->setNumber(4);
-$episode->setSeason($this->getReference('season8_Walking dead'));
-$episode->setSynopsis(' ');
+$episode->setSeason($this->getReference('season1_Good Omens'));
+$episode->setSynopsis('episode4.');
+
 
 $episode = new Episode();
-$episode->setTitle();
+$episode->setTitle('La Solution des temps derniers');
 $episode->setNumber(5);
-$episode->setSeason($this->getReference('season8_Walking dead'));
-$episode->setSynopsis(' ');
+$episode->setSeason($this->getReference('season1_Good Omens'));
+$episode->setSynopsis('episode5.');
+
 
 $episode = new Episode();
-$episode->setTitle();
+$episode->setTitle('Le Tout Dernier Jour du reste de leur vie');
 $episode->setNumber(6);
-$episode->setSeason($this->getReference('season8_Walking dead'));
-$episode->setSynopsis(' ');
+$episode->setSeason($this->getReference('season1_Good Omens'));
+$episode->setSynopsis('episode6.');
 
 $episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(7);
-$episode->setSeason($this->getReference('season8_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(8);
-$episode->setSeason($this->getReference('season8_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(9);
-$episode->setSeason($this->getReference('season8_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(10);
-$episode->setSeason($this->getReference('season8_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(11);
-$episode->setSeason($this->getReference('season8_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(12);
-$episode->setSeason($this->getReference('season8_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(13);
-$episode->setSeason($this->getReference('season8_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(14);
-$episode->setSeason($this->getReference('season8_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(15);
-$episode->setSeason($this->getReference('season8_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(16);
-$episode->setSeason($this->getReference('season8_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
+$episode->setTitle('L Arrivée');
 $episode->setNumber(1);
-$episode->setSeason($this->getReference('season9_Walking dead'));
-$episode->setSynopsis(' ');
-
+$episode->setSeason($this->getReference('season2_Good Omens'));
+$episode->setSynopsis('episode 1');
 
 $episode = new Episode();
-$episode->setTitle();
+$episode->setTitle('L indice');
 $episode->setNumber(2);
-$episode->setSeason($this->getReference('season9_Walking dead'));
-$episode->setSynopsis(' ');
-
+$episode->setSeason($this->getReference('season2_Good Omens'));
+$episode->setSynopsis('episode2.');
 
 $episode = new Episode();
-$episode->setTitle();
+$episode->setTitle('Je sais où je vais');
 $episode->setNumber(3);
-$episode->setSeason($this->getReference('season9_Walking dead'));
-$episode->setSynopsis(' ');
+$episode->setSeason($this->getReference('season2_Good Omens'));
+$episode->setSynopsis("episode3");
 
 $episode = new Episode();
-$episode->setTitle();
+$episode->setTitle('L autostoppeuse !');
 $episode->setNumber(4);
-$episode->setSeason($this->getReference('season9_Walking dead'));
-$episode->setSynopsis(' ');
+$episode->setSeason($this->getReference('season2_Good Omens'));
+$episode->setSynopsis('episode4.');
+
 
 $episode = new Episode();
-$episode->setTitle();
+$episode->setTitle('Le bal');
 $episode->setNumber(5);
-$episode->setSeason($this->getReference('season9_Walking dead'));
-$episode->setSynopsis(' ');
+$episode->setSeason($this->getReference('season2_Good Omens'));
+$episode->setSynopsis('episode5.');
+
 
 $episode = new Episode();
-$episode->setTitle();
+$episode->setTitle('Every Day');
 $episode->setNumber(6);
-$episode->setSeason($this->getReference('season9_Walking dead'));
-$episode->setSynopsis(' ');
+$episode->setSeason($this->getReference('season2_Good Omens'));
+$episode->setSynopsis('episode6.');
+
+
 
 $episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(7);
-$episode->setSeason($this->getReference('season9_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(8);
-$episode->setSeason($this->getReference('season9_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(9);
-$episode->setSeason($this->getReference('season9_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(10);
-$episode->setSeason($this->getReference('season9_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(11);
-$episode->setSeason($this->getReference('season9_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(12);
-$episode->setSeason($this->getReference('season9_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(13);
-$episode->setSeason($this->getReference('season9_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(14);
-$episode->setSeason($this->getReference('season9_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(15);
-$episode->setSeason($this->getReference('season9_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(16);
-$episode->setSeason($this->getReference('season9_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
+$episode->setTitle('Livre1');
 $episode->setNumber(1);
-$episode->setSeason($this->getReference('season10_Walking dead'));
-$episode->setSynopsis(' ');
-
+$episode->setSeason($this->getReference('season1_kaamelott'));
+$episode->setSynopsis('episode 1');
 
 $episode = new Episode();
-$episode->setTitle();
+$episode->setTitle('Livre2');
 $episode->setNumber(2);
-$episode->setSeason($this->getReference('season10_Walking dead'));
-$episode->setSynopsis(' ');
-
+$episode->setSeason($this->getReference('season1_kaamelott'));
+$episode->setSynopsis('episode2.');
 
 $episode = new Episode();
-$episode->setTitle();
+$episode->setTitle('Livre3');
 $episode->setNumber(3);
-$episode->setSeason($this->getReference('season10_Walking dead'));
-$episode->setSynopsis(' ');
+$episode->setSeason($this->getReference('season1_kaamelott'));
+$episode->setSynopsis("episode3");
 
 $episode = new Episode();
-$episode->setTitle();
+$episode->setTitle('Livre4');
 $episode->setNumber(4);
-$episode->setSeason($this->getReference('season10_Walking dead'));
-$episode->setSynopsis(' ');
+$episode->setSeason($this->getReference('season1_kaamelott'));
+$episode->setSynopsis('episode4.');
+
 
 $episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(5);
-$episode->setSeason($this->getReference('season10_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(6);
-$episode->setSeason($this->getReference('season10_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(7);
-$episode->setSeason($this->getReference('season10_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(8);
-$episode->setSeason($this->getReference('season10_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(9);
-$episode->setSeason($this->getReference('season10_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(10);
-$episode->setSeason($this->getReference('season10_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(11);
-$episode->setSeason($this->getReference('season10_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(12);
-$episode->setSeason($this->getReference('season10_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(13);
-$episode->setSeason($this->getReference('season10_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(14);
-$episode->setSeason($this->getReference('season10_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(15);
-$episode->setSeason($this->getReference('season10_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(16);
-$episode->setSeason($this->getReference('season10_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
+$episode->setTitle('Livre2/1');
 $episode->setNumber(1);
-$episode->setSeason($this->getReference('season11_Walking dead'));
-$episode->setSynopsis(' ');
-
+$episode->setSeason($this->getReference('season2_kaamelott'));
+$episode->setSynopsis('episode 1');
 
 $episode = new Episode();
-$episode->setTitle();
+$episode->setTitle('Livre2/2');
 $episode->setNumber(2);
-$episode->setSeason($this->getReference('season11_Walking dead'));
-$episode->setSynopsis(' ');
-
+$episode->setSeason($this->getReference('season2_kaamelott'));
+$episode->setSynopsis('episode2.');
 
 $episode = new Episode();
-$episode->setTitle();
+$episode->setTitle('Livre2/3');
 $episode->setNumber(3);
-$episode->setSeason($this->getReference('season11_Walking dead'));
-$episode->setSynopsis(' ');
+$episode->setSeason($this->getReference('season2_kaamelott'));
+$episode->setSynopsis("episode3");
 
 $episode = new Episode();
-$episode->setTitle();
+$episode->setTitle('Livre2/4');
 $episode->setNumber(4);
-$episode->setSeason($this->getReference('season3_Walking dead'));
-$episode->setSynopsis(' ');
+$episode->setSeason($this->getReference('season2_kaamelott'));
+$episode->setSynopsis('episode4.');
 
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(5);
-$episode->setSeason($this->getReference('season11_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(6);
-$episode->setSeason($this->getReference('season11_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(7);
-$episode->setSeason($this->getReference('season11_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(8);
-$episode->setSeason($this->getReference('season11_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(9);
-$episode->setSeason($this->getReference('season11_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(10);
-$episode->setSeason($this->getReference('season11_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(11);
-$episode->setSeason($this->getReference('season11_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(12);
-$episode->setSeason($this->getReference('season11_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(13);
-$episode->setSeason($this->getReference('season11_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(14);
-$episode->setSeason($this->getReference('season11_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(15);
-$episode->setSeason($this->getReference('season11_Walking dead'));
-$episode->setSynopsis(' ');
-
-$episode = new Episode();
-$episode->setTitle();
-$episode->setNumber(16);
-$episode->setSeason($this->getReference('season11_Walking dead'));
-$episode->setSynopsis(' ');
 
 
 $episode = new Episode();
-$episode->setTitle();
+$episode->setTitle('Livre3/1');
 $episode->setNumber(1);
-$episode->setSeason($this->getReference('season1_'));
-$episode->setSynopsis(' ');
+$episode->setSeason($this->getReference('season3_kaamelott'));
+$episode->setSynopsis('episode 1');
+
+$episode = new Episode();
+$episode->setTitle('Livre3/2');
+$episode->setNumber(2);
+$episode->setSeason($this->getReference('season3_kaamelott'));
+$episode->setSynopsis('episode2.');
+
+$episode = new Episode();
+$episode->setTitle('Livre3/3');
+$episode->setNumber(3);
+$episode->setSeason($this->getReference('season3_kaamelott'));
+$episode->setSynopsis("episode3");
+
+$episode = new Episode();
+$episode->setTitle('Livre3/4');
+$episode->setNumber(4);
+$episode->setSeason($this->getReference('season3_kaamelott'));
+$episode->setSynopsis('episode4.');
+
+
+$episode = new Episode();
+$episode->setTitle('Livre4/1');
+$episode->setNumber(1);
+$episode->setSeason($this->getReference('season4_kaamelott'));
+$episode->setSynopsis('episode 1');
+
+$episode = new Episode();
+$episode->setTitle('Livre4/2');
+$episode->setNumber(2);
+$episode->setSeason($this->getReference('season4_kaamelott'));
+$episode->setSynopsis('episode2.');
+
+$episode = new Episode();
+$episode->setTitle('Livre4/3');
+$episode->setNumber(3);
+$episode->setSeason($this->getReference('season4_kaamelott'));
+$episode->setSynopsis("episode3");
+
+$episode = new Episode();
+$episode->setTitle('Livre4/4 ');
+$episode->setNumber(4);
+$episode->setSeason($this->getReference('season3_kaamelott'));
+$episode->setSynopsis('episode4.');
+
+
+$episode = new Episode();
+$episode->setTitle('Livre5/1');
+$episode->setNumber(1);
+$episode->setSeason($this->getReference('season5_kaamelott'));
+$episode->setSynopsis('episode 1');
+
+$episode = new Episode();
+$episode->setTitle('Livre5/2');
+$episode->setNumber(2);
+$episode->setSeason($this->getReference('season5_kaamelott'));
+$episode->setSynopsis('episode2.');
+
+$episode = new Episode();
+$episode->setTitle('Livre5/3');
+$episode->setNumber(3);
+$episode->setSeason($this->getReference('season5_kaamelott'));
+$episode->setSynopsis("episode3");
+
+$episode = new Episode();
+$episode->setTitle('Livre5/4');
+$episode->setNumber(4);
+$episode->setSeason($this->getReference('season5_kaamelott'));
+$episode->setSynopsis('episode4.');
+
+
+$episode = new Episode();
+$episode->setTitle('Livre6/1');
+$episode->setNumber(1);
+$episode->setSeason($this->getReference('season6_kaamelott'));
+$episode->setSynopsis('episode 1');
+
+$episode = new Episode();
+$episode->setTitle('Livre6/2');
+$episode->setNumber(2);
+$episode->setSeason($this->getReference('season6_kaamelott'));
+$episode->setSynopsis('episode2.');
+
+$episode = new Episode();
+$episode->setTitle('Livre6/3');
+$episode->setNumber(3);
+$episode->setSeason($this->getReference('season6_kaamelott'));
+$episode->setSynopsis("episode3");
+
+$episode = new Episode();
+$episode->setTitle('Livre6/4');
+$episode->setNumber(4);
+$episode->setSeason($this->getReference('season6_kaamelott'));
+$episode->setSynopsis('episode4.');
+
+
+
+
+$episode = new Episode();
+$episode->setTitle('La Maison');
+$episode->setNumber(1);
+$episode->setSeason($this->getReference('season1_American Horror Story'));
+$episode->setSynopsis('En 1978, les jumeaux Bryan et Troy arrivent et entrent dans un vieux manoir, malgré une jeune Adélaïde les avertissant qu ils mourraient. Les garçons la menacent et entrent quand même dans la maison. Ils vandalisent un peu la maison avec des battes de baseball avant d entrer dans le sous-sol où ils sont tués. En 2011, Vivien et Ben Harmon déménagent de Boston à Los Angeles, après que Vivien a fait une fausse couche et qu il a surpris Ben en train de coucher avec l un de ses étudiants. Leur fille adolescente Violet est mécontente du déménagement. Ils tombent sur le manoir et l agent immobilier Marcy mentionne les précédents propriétaires, un couple homosexuel, mort d un apparent meurtre-suicide. La famille décide d acheter la maison et d y emménager. Dans le grenier, ils découvrent un costume de bondage en latex, qui appartenait vraisemblablement aux anciens propriétaires. Vivien rencontre sa voisine Constance et sa fille Adélaïde atteinte de trisomie. Vivien réembauche également la femme de chambre âgée Moira O Hara qui semble être une jeune femme de chambre séduisante pour Ben. Le soir même, Ben se dispute avec Vivien, essayant de s excuser pour son infidélité. Ensuite, les deux ont des relations sexuelles. Lors de son premier jour d école, Violet est harcelée par Leah et ses amis, qui combattent plus tard Violet. Ben commence des séances de thérapie avec un garçon peut-être psychotique nommé Tate, qui entame une relation avec Violet. Pour aider Violet avec son problème d intimidation, il suggère d effrayer Leah dans la maison. Ben trouve Moira en train de se masturber et il fait la même chose. Ben voit alors un homme brûlé et défiguré le regarder de l extérieur. Quand il va l affronter, il est introuvable. Pendant ce temps, Violet trompe Leah dans le sous-sol en disant qu elle a de la drogue, seulement pour y trouver Tate. Lui et la créature qui a tué les jumeaux en 1978 attaquent Leah, laissant la fille traumatisée. Violet, terrifiée par Tate, lui dit de partir. Plus tard dans la nuit, un homme portant le costume gimp entre dans la chambre de Vivien et a des relations sexuelles avec Vivien, Vivien supposant qu il est Ben. En bas, un Ben somnambule est attiré par le poêle et essaie de se brûler la main, mais Constance l arrête.');
+
+$episode = new Episode();
+$episode->setTitle('Intrus');
+$episode->setNumber(2);
+$episode->setSeason($this->getReference('season1_American Horror Story'));
+$episode->setSynopsis('Un flash-back de 1968 montre que la maison était utilisée comme dortoir pour les étudiants en soins infirmiers. Alors qu elles sont seules à la maison tard dans la nuit, les étudiantes infirmières Maria et Gladys étudient lorsqu un homme sonne à la porte et demande de l aide. Remarquant que l homme saigne de la tête, Maria le laisse entrer et commence à panser ses blessures. Quand elle se rend compte qu il n y a pas de véritable coupure sur sa tête et que l homme simule sa blessure, l homme les attaque tous les deux. Tout d abord, assommant Maria avec un cendrier avant de pousser une Gladys en fuite au sol, la narguant avec une insulte à propos de son poids puis la noyant dans une baignoire à l étage. Maria se réveille et voit l homme qui l oblige à se déshabiller et à porter un uniforme d infirmière. Elle est alors ligotée et poignardée à plusieurs reprises dans le dos. De retour dans le présent, Ben rencontre Tate, qui révèle ses fantasmes sexuels sur Violet. Ben voit une nouvelle patiente, nommée Bianca, qui est fascinée par l histoire des meurtres dans la maison. Il reçoit un appel de son ex-maîtresse et ancienne élève à lui, Hayden, qui lui dit qu elle est enceinte et qu elle a besoin de son soutien tout en se faisant avorter. Constance sent que Vivien est enceinte et Vivien avoue qu elle craint qu il y ait quelque chose qui ne va pas avec le bébé. Constance lui assure que son bébé va bien et avoue que trois de ses quatre enfants sont nés avec une sorte de malformation congénitale. Afin de voir Hayden, Ben ment à Vivien, disant qu il doit se rendre à Boston pour voir un patient qui a tenté de se suicider. Violet révèle à Vivien qu elle est au courant de la grossesse. Cette nuit-là, un trio de passionnés de tueurs en série, Bianca (vu plus tôt par Ben), Fiona et Dallas font irruption dans la maison et capturent Vivien et Violet. Le trio explique son plan pour reconstituer les meurtres de Maria et Gladys au duo. Fiona présente le cendrier utilisé pour frapper Maria. Bianca se demande qui sera qui avant que Fiona ne choisisse Vivien comme Maria et Violet comme Gladys. Sortant les uniformes des infirmières, il y a un conflit entre le groupe lorsque Vivien et Violet refusent de faire partie de leur reconstitution. Après que Fiona a jeté un uniforme à Violet, elle la frappe au visage et tente de s échapper avant de tomber sur Tate, qui lui dit qu elle doit attirer les trois dans le sous-sol. Violet parvient à attirer Fiona au sous-sol. Bianca mange un cupcake avec du sirop d ipéca, que Constance avait fait plus tôt pour Violet, et vomit violemment. Une Bianca maintenant gravement malade encourage Fiona à annuler leur plan et à l emmener à l hôpital. Entrant dans la salle de bain, elle voit quelqu un passer devant la baignoire. Quand elle regarde dans le coin de la douche, personne n est là. Se retournant pour partir, Bianca voit Tate qui balance une hache dans son estomac, la blessant mortellement. Elle marche péniblement dans le couloir, laissant du sang sur les murs et le sol avant de mourir hors écran. Au sous-sol, Fiona rencontre Tate avec Gladys, qui la tue en lui tranchant la gorge. Pendant ce temps, Vivien repousse Dallas et fuit la maison avec Violet. Dallas est tué par Gladys et Maria. Constance, Tate et Moira acceptent de se débarrasser des corps, révélant qu ils veulent que Ben continue à soigner Tate..');
+
+$episode = new Episode();
+$episode->setTitle(' La Maison de l horreur');
+$episode->setNumber(3);
+$episode->setSeason($this->getReference('season1_American Horror Story'));
+$episode->setSynopsis("En 1983, Hugo Langdon, le mari de Constance, commence à faire des avances sexuelles non désirées à une jeune Moira qui répare un lit dans la chambre. Elle continue de le refuser pour garder son emploi. Hugo la jette sur le lit et la viole. Constance les rejoint, interprétant à tort ses avances sur Moira comme consensuelles. En conséquence, une Constance au cœur brisé les tue tous les deux en tirant sur Moira dans les yeux et sur Hugo dans la poitrine. Les finances des Harmons en prennent un coup, rendant le déménagement impossible. Pendant ce temps, Ben s endort lors d un rendez-vous et se réveille dans la cour après avoir creusé un trou, mais sans aucun souvenir. Moira continue de harceler sexuellement Ben et il menace de la renvoyer. Il est incapable de convaincre Vivien des avances sexuelles de Moira, et Moira menace de poursuivre s ils essaient de la renvoyer sans motif valable. Hayden arrive, annonce qu elle garde le bébé et déménage à proximité, et veut que Ben continue leur liaison. Vivien fait une visite en bus des lieux hantés de Los Angeles, après avoir découvert que la maison est en tournée, où l origine de la maison est expliquée. Charles Montgomery, le premier propriétaire de la maison et médecin, avait développé une dépendance à l anesthésie et a commencé à mener des expériences de type Frankenstein. Avec l aide de sa femme, Nora, Charles a commencé à pratiquer des avortements sur de jeunes femmes. Dans le bus, Vivien craint de refaire une fausse couche à cause d un saignement vaginal. Le médecin assure à Vivien que le bébé va bien, mais l informe que le stress du déménagement pourrait provoquer une fausse couche. Ben rencontre Larry, qui demande de l argent. Lorsque Ben rentre chez lui, il s évanouit à nouveau et se réveille au même endroit dans la cour. Alors qu il commence à creuser, Constance l encourage à rester avec la maison et à construire quelque chose à cet endroit..");
+
+$episode = new Episode();
+$episode->setTitle('Halloween, première partie');
+$episode->setNumber(4);
+$episode->setSeason($this->getReference('season1_American Horror Story'));
+$episode->setSynopsis('Un flashback montre un couple, Chad et Patrick, qui sont propriétaires de la maison en 2010. Chad confronte Patrick à propos de son infidélité. Le Rubber Man apparaît après que Patrick a quitté la pièce et attaque Chad. Patrick rentre dans la pièce et voit le Rubber Man. Larry demande un paiement pour avoir tué Hayden, ce que Ben refuse. Adélaïde est alors percutée par une voiture. Constance tente de l amener sur la pelouse des Harmons avant de mourir, afin qu elle puisse devenir un fantôme, mais échoue. Tate dit à Violet que l Infantata est le fils du Dr Charles Montgomery et de Nora, Charles l ayant ramené à la vie en utilisant des parties d animaux après avoir été démembré. Vivien se rend compte que Ben a envoyé plusieurs SMS à Hayden, mais Ben insiste sur le fait que lui et Hayden sont terminés. Vivien et Ben vont à l hôpital, après que le bébé à naître de Vivien a donné un coup de pied à seulement huit semaines. Le bébé est plus développé qu il ne devrait l être et l infirmière s effondre après l avoir vu. Le soir d Halloween, lorsque les fantômes peuvent quitter la maison, Moira rend visite à sa mère à l hôpital. Elle déconnecte alors sa machine de survie, mais est incapable de continuer avec elle.'); 
+
+
+$episode = new Episode();
+$episode->setTitle('Bienvenue à Briarcliff');
+$episode->setNumber(1);
+$episode->setSeason($this->getReference('season2_American Horror Story'));
+$episode->setSynopsis('En 2012, Teresa et Leo, un couple en lune de miel, explorent le manoir de Briarcliff, un asile psychiatrique abandonné dans le Massachusetts rural. En 1964, Kit Walker s y voit interné, accusé d être le tueur en série que la presse surnomme « Bloody Face ». Kit est certain de son innocence et ses souvenirs suggèrent que les événements survenus sont surnaturels. Dans l asile, Kit se lie d amitié avec Grace, une patiente accusée d avoir assassiné sa famille. La journaliste Lana Winters entre dans Briarcliff dans l espoir de percer à jour les conditions de ses patients et ainsi d assurer une vie meilleure pour elle et sa partenaire, Wendy Peyser, une enseignante. Elle fait face à la tyrannique Sœur Jude, qui la fait interner à cause de son lesbianisme. Une rivalité éclate entre Sœur Jude et le Docteur Arthur Arden, qui utilise la torture et le meurtre dans le but de découvrir une immunité dans le corps humain afin de survivre à une guerre nucléaire. Dans le présent, Teresa et Leo sont attaqués et traqués dans l asile par Bloody Face.');
+
+$episode = new Episode();
+$episode->setTitle('Exorcisme');
+$episode->setNumber(2);
+$episode->setSeason($this->getReference('season2_American Horror Story'));
+$episode->setSynopsis('Le docteur Oliver Thredson, psychologue, arrive à Briarcliff pour établir un diagnostic pour Kit afin de déterminer si sa santé mentale est assez bonne pour paraître en justice pour les meurtres de Bloody Face. Pendant ce temps, un exorciste est appelé à l asile lorsque le comportement d un adolescent s aggrave ; il semble être possédé par un démon. Le rituel donne à Lana et Grace une chance de s échapper, mais Lana, qui se sent trahie par le fait que Grace veuille que Kit parte avec eux, les empêche finalement de s échapper. L adolescent possédé expose le sombre passé de Sœur Jude qui la hante encore à ce jour : en 1949, alors qu elle conduit alcoolisée, elle renverse une petite fille sur son vélo et la tue. L adolescent meurt quand le démon s échappe de son corps pendant l exorcisme et entre dans celui de Sœur Mary Eunice..');
+
+$episode = new Episode();
+$episode->setTitle('La Tempête');
+$episode->setNumber(3);
+$episode->setSeason($this->getReference('season2_American Horror Story'));
+$episode->setSynopsis("Une violente tempête frappe Briarcliff, ce qui permet à certains patients d'organiser une audacieuse fugue. Le tumultueux passé de Sœur Jude revient la hanter.");
+
+$episode = new Episode();
+$episode->setTitle('Anne Frank');
+$episode->setNumber(4);
+$episode->setSeason($this->getReference('season2_American Horror Story'));
+$episode->setSynopsis('Une nouvelle patiente prétendant être Anne Frank révèle le passé du docteur Arden. Tout resurgit et se complique lorsque la police se met aussi à enquêter sur lui. Par ailleurs, Kit découvre pourquoi Grace a été admise à Briarcliff. Le docteur Thredson, quant à lui, propose à Lana Winters une thérapie pour inverser sa tendance sexuelle afin de l aider à quitter Briarcliff..');
+
+    }
+}
