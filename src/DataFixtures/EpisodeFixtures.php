@@ -3,44 +3,49 @@
 namespace App\DataFixtures;
 
 use App\Entity\Episode;
-use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectEpisode;
+use Doctrine\Persistence\ObjectManager;
+use Doctrine\Bundle\FixturesBundle\Fixture;
+use Doctrine\Common\DataFixtures\DependentFixtureInterface;
 
-class EpisodeFixtures extends Fixture
+class EpisodeFixtures extends Fixture implements DependentFixtureInterface
 { 
-    public function load (ObjectEpisode $episode)
+    public function load(ObjectManager $manager)
     {
 $episode = new Episode();
 $episode->setTitle('Welcome to the Playground');
 $episode->setNumber(1);
 $episode->setSeason($this->getReference('season1_Arcane'));
 $episode->setSynopsis('Les sœurs orphelines Vi et Powder causent des remous dans les rues souterraines de Zaun à la suite d un braquage dans le très huppé Piltover. ');
+$manager->persist($episode);
 
 $episode = new Episode();
 $episode->setTitle('Certains mystères ne devraient jamais être résolus');
 $episode->setNumber(2);
 $episode->setSeason($this->getReference('season1_Arcane'));
 $episode->setSynopsis('Idéaliste, le chercheur Jayce tente de maîtriser la magie par la science malgré les avertissements de son mentor. Le criminel Silco teste une substance puissante.');
+$manager->persist($episode);
 
 $episode = new Episode();
 $episode->setTitle('Cette violence crasse nécessaire au changement');
 $episode->setNumber(3);
 $episode->setSeason($this->getReference('season1_Arcane'));
 $episode->setSynopsis('Deux anciens rivaux s affrontent lors d un défi spectaculaire qui se révèle fatidique pour Zaun. Jayce et Viktor prennent de gros risques pour leurs recherches.'); 
+$manager->persist($episode);
 
 $episode = new Episode();
 $episode->setTitle('Joyeuse Fête du progrès !');
 $episode->setNumber(4);
 $episode->setSeason($this->getReference('season1_Arcane'));
 $episode->setSynopsis('Alors que Piltover profite de leur technologie, Jayce et Viktor réfléchissent à ce qu ils vont faire. Un visage familier ressort de Zaun pour semer la pagaille.');
-
+$manager->persist($episode);
 
 $episode = new Episode();
 $episode->setTitle('L ennemi commun');
 $episode->setNumber(5);
 $episode->setSeason($this->getReference('season1_Arcane'));
 $episode->setSynopsis('Caitlyn, la pacifieuse qui n en fait qu à sa tête, arpente les bas-fonds pour trouver Silco. Jayce devient une cible en combattant la corruption à Piltover.');
-
+$manager->persist($episode);
 
 $episode = new Episode();
 $episode->setTitle('Quand l empire s effondre');
@@ -659,6 +664,12 @@ $episode->setTitle('Anne Frank');
 $episode->setNumber(4);
 $episode->setSeason($this->getReference('season2_American Horror Story'));
 $episode->setSynopsis('Une nouvelle patiente prétendant être Anne Frank révèle le passé du docteur Arden. Tout resurgit et se complique lorsque la police se met aussi à enquêter sur lui. Par ailleurs, Kit découvre pourquoi Grace a été admise à Briarcliff. Le docteur Thredson, quant à lui, propose à Lana Winters une thérapie pour inverser sa tendance sexuelle afin de l aider à quitter Briarcliff..');
-
+$manager->flush();
+    }
+    public function getDependencies()
+    {
+        return [
+            SeasonFixtures::class,
+        ];
     }
 }

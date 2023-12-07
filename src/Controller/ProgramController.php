@@ -7,6 +7,7 @@ use Symfony\Component\HttpClient\Response\ResponseStream;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Repository\ProgramRepository;
+use App\Repository\SeasonRepository;
 
 #[Route('/program', name: 'program_')]
 
@@ -37,4 +38,21 @@ public function show(int $id, ProgramRepository $programRepository):Response
         'program' => $program,
     ]);
 }
+ #[Route('/{programId}/seasons/{seasonId}', name:'season_show')]
+public function showSeason(int $programId, int $seasonId, ProgramRepository $programRepository, SeasonRepository $seasonRepository):Response
+{
+
+    $program = $programRepository->findOneBy(['id'=> $programId]);
+    $season = $seasonRepository->find($seasonId);
+    if (!$program) {
+        throw $this->createNotFoundException(
+            ''.$programId.''
+            );
+        }
+        return $this->render('program/season-show.html.twig', [
+            'program' => $program,
+             'season' => $season,
+        ]);
+    }
 }
+
