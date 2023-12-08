@@ -2,18 +2,36 @@
 namespace App\DataFixtures;
 
 use App\Entity\Season;
+use App\Repository\ProgramRepository;
 use Doctrine\Persistence\ObjectManager;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\DataFixtures\DependentFixtureInterface;
 
+use Faker\Factory;
 
 class SeasonFixtures extends Fixture implements DependentFixtureInterface
 { 
-    public function load(ObjectManager $manager)
+    public const PROGRAMS=['Walking dead','Arcane', 'Jujutsu Kaisen','Good Omens','kaamelott','American Horror Story','Gen V'];
+
+    public function load(ObjectManager $manager): void
     {
+    $faker = Factory::create();
+
+    for($i = 0; $i < 50; $i++) {
+        $season = new Season();
+        //Ce Faker va nous permettre d'alimenter l'instance de Season que l'on souhaite ajouter en base
+        $program = array_rand(self::PROGRAMS,1);
+        $season->setNumber($faker->numberBetween(1, 10));
+        $season->setYear($faker->year());
+        $season->setDescription($faker->paragraphs(3, true));
+        $season->setProgram($this->getReference('program_' . self::PROGRAMS[$program]));
+        $this->addReference('season_' . ($i % 50 + 1), $season);
+        $manager->persist($season);
+    }
+   
 
 
-$season = new Season();
+/*$season = new Season();
 $season->setNumber(1);
 $season->setProgram($this->getReference('program_Arcane'));
 $season->setDescription('Arcane est une série télévisée d animation américano-française dont le scénario prend place dans l univers du jeu vidéo League of Legends.');
@@ -38,7 +56,7 @@ $season->setYear(2011);
 $this->addReference('season2_Walking dead', $season);
 $manager->persist($season);
 
-//src/DataFixtures/SeasonFixtures.php
+
 $season = new Season();
 $season->setNumber(3);
 $season->setProgram($this->getReference('program_Walking dead'));
@@ -46,7 +64,7 @@ $season->setDescription('Après l attaque de la ferme des Greene par les morts-v
 $season->setYear(2012);
 $this->addReference('season3_Walking dead', $season);
 $manager->persist($season);
-//src/DataFixtures/SeasonFixtures.php
+
 $season = new Season();
 $season->setNumber(4);
 $season->setProgram($this->getReference('program_Walking dead'));
@@ -215,9 +233,9 @@ $season->setDescription('Asylum');
 $season->setYear(2012);
 $this->addReference('season2_American Horror Story', $season);
 $manager->persist($season);
-$manager->flush();
+*/$manager->flush();
     }
-    public function getDependencies()
+    public function getDependencies(): array
     {
         return [
             ProgramFixtures::class,
