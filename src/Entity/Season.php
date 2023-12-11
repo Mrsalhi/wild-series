@@ -26,7 +26,7 @@ class Season
     private ?string $description = null;
 
     #[ORM\ManyToOne(inversedBy: 'seasons')]
-    private ?program $program = null;
+    private ?Program $program = null;
 
     #[ORM\OneToMany(mappedBy: 'season', targetEntity: Episode::class)]
     private Collection $episodes;
@@ -77,12 +77,12 @@ class Season
         return $this;
     }
 
-    public function getProgram(): ?program
+    public function getProgram(): ?Program
     {
         return $this->program;
     }
 
-    public function setProgram(?program $program): static
+    public function setProgram(?Program $program): static
     {
         $this->program = $program;
 
