@@ -1,12 +1,12 @@
-
+{% extends 'base.html.twig' %}
 {% block body %}
-    <h1>acteurs : </h1>
+    <h1>acteurs  </h1>
     {% for actor in actors %}
         <div>
             <h2>{{ loop.index }} / {{ actor.name }} </h2>
        
             
-    <a href="{{ path('actor_show', {actorName: actor.name}) }}"</a>
+    <a href="{{ path('actor_show', {id: actor.id}) }}"</a>
 
         </div>
     {% endfor %}
