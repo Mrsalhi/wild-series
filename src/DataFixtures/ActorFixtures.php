@@ -5,7 +5,7 @@ namespace App\DataFixtures;
 use Faker\Factory;
 use Doctrine\Persistence\ObjectManager;
 use Doctrine\Bundle\FixturesBundle\Fixture;
-;
+use App\DataFixtures\actor;
 
 class ActorFixtures extends Fixture
 {
