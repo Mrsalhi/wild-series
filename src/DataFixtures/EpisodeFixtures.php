@@ -9,24 +9,32 @@ use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\DataFixtures\DependentFixtureInterface;
 use Faker\Factory;
 
-class EpisodeFixtures extends Fixture implements DependentFixtureInterface
-{ 
-    public function load(ObjectManager $manager)
+
+    class EpisodeFixtures extends Fixture implements DependentFixtureInterface
     {
-
-        $faker = Factory::create();
-
-        for($i = 0; $i < 250; $i++) {
-            $episode = new episode();
-            //Ce Faker va nous permettre d'alimenter l'instance de Season que l'on souhaite ajouter en base
-            $episode->setNumber($faker->numberBetween(1, 10));
-            $episode->settitle($faker->title());
-            $episode->setSynopsis($faker->paragraphs(3, true));
-            $episode->setSeason($this->getReference('season_' . ($i % 25 + 1)));
-            $manager->persist($episode);
+        public function load(ObjectManager $manager): void
+        {
+            $faker = Factory::create();
+    
+            for ($i = 0; $i < 250; $i++) {
+                $episode = new Episode();
+                $episode->setNumber($faker->numberBetween(1, 10));
+                $episode->setTitle($faker->paragraph(1, true));
+                $episode->setSynopsis($faker->paragraphs(3, true));
+                $episode->setSeason($this->getReference('season_' . ($i % 25 + 1)));
+    
+                $manager->persist($episode);
+            }
+            $manager->flush();
         }
-        $manager->flush();
-
+        public function getDependencies()
+        {
+            // Tu retournes ici toutes les classes de fixtures dont ProgramFixtures dépend
+            return [
+                SeasonFixtures::class,
+            ];
+        }
+    }
 /*$episode = new Episode();
 $episode->setTitle('Welcome to the Playground');
 $episode->setNumber(1);
@@ -744,11 +752,4 @@ $episode->setSeason($this->getReference('season2_American Horror Story'));
 $episode->setSynopsis('Une nouvelle patiente prétendant être Anne Frank révèle le passé du docteur Arden. Tout resurgit et se complique lorsque la police se met aussi à enquêter sur lui. Par ailleurs, Kit découvre pourquoi Grace a été admise à Briarcliff. Le docteur Thredson, quant à lui, propose à Lana Winters une thérapie pour inverser sa tendance sexuelle afin de l aider à quitter Briarcliff..');
 $manager->persist($episode);
 $manager->flush();*/
-    }
-    public function getDependencies()
-    {
-        return [
-            SeasonFixtures::class,
-        ];
-    }
-}
+    
